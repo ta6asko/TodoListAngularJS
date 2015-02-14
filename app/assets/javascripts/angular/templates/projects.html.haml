@@ -1,0 +1,24 @@
+.project{"ng-repeat" => "project in projects"}
+  .project_content
+    .project_header
+      .icon_note
+      .edit_project
+        %form{"ng-submit" => "updateProject(project, project.id)", "ng-show" => "project.editProject",  :role => "form"}
+          %input{:autofocus => "", "ng-model" => "project.title", :type => "text", :id => 'update_project_input'}
+          %button{:type => "submit"} 
+            = I18n.t('task.update_task')
+      .project_title{"ng-hide" => "project.editProject"}
+        {{project.title}}
+      .project_tools
+        .icon_trash{"ng-click" => "deleteProject(project.id, $index)"}
+        .icon_edit{"ng-click" => "project.editProject = true"}
+    .create_task_panel{"ng-controller" => "TasksController"}
+      .icon_plus
+      %form{"ng-submit" => "createTask(project.id)", :role => "form"}
+        %input{:autofocus => "", "ng-model" => "newTask.title", :type => "text", :required => "", :id => "create_task_input"}
+        %input{:dp => "", :type => "text", "ng-model" => "newTask.deadline", :required => "", :id => "deadline"}
+        %button 
+          = I18n.t('task.add_task') 
+  .tasks{"ng-include" => "'angular/templates/tasks.html'"}
+  
+  

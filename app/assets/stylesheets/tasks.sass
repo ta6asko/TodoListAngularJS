@@ -1,0 +1,364 @@
+.task
+  @extend .panel-body
+  padding: 0px
+  input
+    // @extend .box
+    @extend .col-md-1
+    margin-top: 12px
+  a
+    text-decoration: none
+    line-height: 18px
+    @extend .col-md-9
+.task_panel
+  @extend .panel 
+  @extend .panel-default
+
+.panel-group .task_panel + .task_panel
+  margin-top: 0px
+
+.update_task_form
+  @extend .col-md-9
+  form
+    input 
+      @extend .form-control
+      @extend .input-sm
+      display: inline
+      width: 400px
+
+.task_tools
+  @extend .col-md-2
+  margin-top: 9px
+
+.icon_trash_task
+  @extend .glyphicon
+  @extend .glyphicon-trash
+  @extend .col-md-1
+  float: right
+
+.icon_edit_task
+  @extend .glyphicon
+  @extend .glyphicon-pencil
+  @extend .col-md-1
+  float: right
+
+
+
+
+
+
+
+
+
+
+
+
+// .create_task_form {
+//   display: inline-block;
+// } 
+
+// .project_title{
+//   width: 700px;
+//   height: 45px;
+//   /*display: inline-block;*/
+//   /*background: url(image_path('back_proj_title.png'));*/
+//   /*border: 1px solid #315589;*/
+// }
+// .project_name{
+//   line-height: 49px;
+//   color: white;
+// }
+// .new_task{
+//   margin-top: 7px;
+// }
+// .text_field {
+//   width: 373px;
+//   line-height: 26px;
+// }
+// .dead_line{
+//   line-height: 24px;
+//   width: 144px;
+//   height: 26px;
+// }
+// .task_input_button {
+//   width: 105px; 
+//   background: url(image_path('back_proj_inp_but.png'));
+//   border: 1px solid #447557;
+//   color: white; 
+//   text-align: center;
+//   font-size: 13px;
+//   line-height: 26px
+// }
+// .edit_project{
+//   margin-top: 10px;
+// }
+// .project_edit_input{
+//   display: none;
+// }
+// .project_title_notepad{
+//   margin: 11px;
+//   float: left;
+// }
+// .task_creator_img{
+//   margin: 11px;
+//   float: left;
+// }
+// .edit_project{
+//   display: none;
+// }
+// .edit_task{
+//   display: none;
+// }
+// .project_update_input{
+//   height: 22px;
+// }
+// .comment {
+//   // height: 37px;
+// }
+// .create_comment_panel {
+//   height: 37px;
+// }
+
+// .panel-group .panel{
+//   margin: 0px;
+//   overflow: visible;
+// }
+// .panel-group .panel+.panel{
+//   margin: 0px;
+// }
+
+// .project_create_input{
+//   /*height: 32px;*/
+//   /*float: left;
+//   width: 346px;
+//   margin-top: 6px;
+//   background: url(image_path("back_proj_inp.png"));
+//   border-left: 1px solid #aaaaaa;
+//   border-bottom: 1px solid #aaaaaa;  
+//   border-right: 1px solid #aaaaaa;
+//   line-height: 26px;*/
+// }
+// .task_input_button:hover{
+//   background: url(image_path('back_proj_inp_but_hov.png'));
+// }
+// .project_tools{
+//   float: right;
+//   display: none;
+// }
+// .project_title:hover .project_tools {
+//   display: block;
+// }
+
+// .task_tools{
+//   display: none;
+// }
+// .task:hover .task_tools {
+//   display: block;
+// }
+// .delete_project{
+//   float: right;
+//   margin-top: 15px;
+//   margin-right: 12px;
+//   cursor: pointer;
+// }
+// .project_title_strip{
+//   float: right;
+//   margin-top: 15px;
+//   margin-right: 12px;
+// }
+// .edit_project_img{
+//   float: right;
+//   margin-top: 15px;
+//   margin-right: 12px;
+//   cursor: pointer;
+// }
+
+// .create_task_panel{
+//   height: 45px;
+// }
+
+// .project_creator{
+//   /*width: 700px;*/
+//   height: 45px;
+//   /*display: inline-block;*/
+//   /*background: #d0d0d0;*/
+//   /*border: 1px solid #b2b2a2;*/
+// }
+
+// .content_task_container{
+//   border-left: 1px solid #efdadf;
+//   float: left;
+//   margin-left: 2px;
+//   padding-left: 8px;
+// }
+
+// .task_checkbox{
+//   float: left;
+//   width: 50px;  
+// }
+// .checkbox{
+//   margin-top: 20px;
+//   margin-left: 20px;
+// }
+// .content_task{
+//   // width: 520px; 
+//   display: inline-block;
+//   border-left: 1px solid #efdadf;
+//   float: left;
+//   border-right: 1px solid #e7ebea;
+// }
+// .task_ok{
+//   display: none;
+// }
+// .task_name{
+//   width: 420px;
+//   padding-top: 18px;
+//   padding-bottom: 17px;
+//   float: left;   
+// }
+// .text_field_edit{
+//   width: 250px;
+//   line-height: 26px;
+//   margin-top: 4px;
+//   margin-bottom: 19px
+// }
+// .task_date{
+//   padding-top: 18px;
+//   float: right;
+//   margin-right:10px;
+//   padding-bottom: 17px;
+// }
+// .content_task_right{
+//   float: right;
+//   margin-top: 6px;
+//   padding-left: 10px;
+//   display: none;
+// }
+// .task:hover .content_task_right{
+//   display: block;
+// }
+// .delete_task{
+//   float: right;
+//   margin-top: 15px;
+//   margin-right: 12px;
+//   cursor: pointer;
+// }
+// .task_title_strip{
+//   float: right;
+//   margin-top: 15px;
+//   margin-right: 12px;
+// }
+// .edit_task_img{
+//   float: right;
+//   margin-top: 15px;
+//   margin-right: 12px;
+//   cursor: pointer;
+// }
+// .sorting_task{
+//   float: right;
+//   margin-top: 15px;
+//   margin-right: 12px;
+//   cursor: pointer;
+// }
+// .add_button{
+//   text-align: center;
+//   margin-top: 50px;
+//   margin: 0 auto;
+// }
+// .Add_list{
+//   text-decoration: none;
+//   background: url(image_path('back_add_list.png'));
+//   color: white;
+//   border: 1px solid #315589;
+//   border-radius: 2px 2px 2px 2px;
+//   display: inline-block;
+//   width: 210px;
+//   line-height: 46px; 
+// }
+// .Add_list:visited{
+//   text-decoration: none;
+//   color: white;
+//   border: 1px solid #315589;
+//   border-radius: 2px 2px 2px 2px;
+//   display: inline-block;
+//   width: 210px;
+//   line-height: 46px;
+// }
+// .Add_list:hover{
+//   text-decoration: none;
+//   background: url(image_path('back_add_list_hov.png'));
+//   color: white;
+//   border: 1px solid #315589;
+//   border-radius: 2px 2px 2px 2px;
+//   display: inline-block;
+//   width: 210px;
+//   line-height: 46px;
+// }
+// .add{
+//   float: left;
+//   font-size: 20px;
+//   font-weight: bold;
+// }
+// .right{
+//   margin-top: 30px;
+//   padding-bottom: 30px;
+//   text-align: center;
+// }
+// .new_project{
+//   margin: 0 auto;
+//   width: 500px;
+//   margin-top: 50px;
+//   display: none;
+//   background: url(image_path('back_proj_title.png'));
+//   border: 1px solid #315589;
+// }
+// li .handle {
+//   font-size: 12px;
+//   cursor: move;
+//   color: #777;
+// }
+// .text_field_project{
+//   line-height: 24px;
+//   width: 373px;
+// }
+// .project_edit_button{
+//   width: 105px; 
+//   background: url(image_path('back_proj_inp_but.png'));
+//   border: 1px solid #447557;
+//   color: white; 
+//   text-align: center;
+//   font-size: 13px;
+//   line-height: 26px
+// }
+// .project_edit_button:hover{
+//   background: url(image_path('back_proj_inp_but_hov.png'));
+// }
+// .project_create_input{
+//   width: 381px;
+//   padding: 3px;
+// }
+// .inp{
+//   width: 105px; 
+//   background: url(image_path('back_proj_inp_but.png'));
+//   border: 1px solid #447557;
+//   color: white; 
+//   text-align: center;
+//   font-size: 13px;
+//   line-height: 26px
+// }
+// .inp:hover{
+//   background: url(image_path('back_proj_inp_but_hov.png'));
+// }
+// .clearfix {
+//   *zoom: 1;
+//   &:before,
+//   &:after {
+//     display: table;
+//     content: "";
+//     // Fixes Opera/contenteditable bug:
+//     // http://nicolasgallagher.com/micro-clearfix-hack/#comment-36952
+//     line-height: 0;
+//   }
+//   &:after {
+//     clear: both;
+//   }
+// }

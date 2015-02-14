@@ -1,0 +1,19 @@
+.panel-group{"ng-controller" => "TasksController", "bs-collapse" => "", "ng-model" => "panels.activePanel"}
+  %div{"ui-sortable" => "sortableOptions", "ng-model" => "project.tasks"}
+    .task_panel{"ng-repeat" => "task in project.tasks"}
+      .task
+        .div
+          %input{"ng-change" => "updateTask(project.id, task.id, task)", "ng-model" => "task.completed", :type => "checkbox", :id => "task_box"}
+          %a{"ng-hide" => "task.editTask", "bs-collapse-toggle" => "", :href => ""}
+            {{ task.title }} 
+            %br  
+              deadline: {{ task.deadline }}
+          .update_task_form{"ng-show" => "task.editTask"}
+            %form{"ng-submit" => "updateTask(project.id, task.id, task)", :role => "form"}
+              %input{:autofocus => "", "ng-model" => "task.title", :type => "text", :required => "", :id => "update_task_input"}
+              %button{:type => "submit"} Update
+        .task_tools
+          .icon_trash_task{"ng-click" => "deleteTask(task.id, $index)", "ng-model" => "task.destroy"}
+          .icon_edit_task{"ng-click" => "task.editTask = true"}   
+      %div{"ng-include" => "'angular/templates/comments.html'"}
+     

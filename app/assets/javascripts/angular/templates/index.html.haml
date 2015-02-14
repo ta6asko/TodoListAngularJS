@@ -1,0 +1,14 @@
+.title_top
+  %h2 simple todo lists
+  %h3 from ruby garage
+.messages{"ng-repeat" => "error in projectsErrors.errors"} 
+  %h3 {{error}}
+.projects{"ng-include" => "'angular/templates/projects.html'"}
+.add_project
+  %a{:href => "", "ng-click" => "showCreateForm = true", "ng-hide" => "showCreateForm"} 
+    = I18n.t('project.add_list')
+  %form{"ng-submit" => "createProject()", :role => "form", "ng-show" => "showCreateForm"}
+    %input{:id => "create_project_input", :autofocus => "", "ng-model" => "newProject.title", :type => "text", 'required' => ""}
+    %button{:type => "submit"} 
+      = I18n.t('project.add_project')
+

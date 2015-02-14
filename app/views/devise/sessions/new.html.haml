@@ -1,0 +1,17 @@
+.sign_in
+  .omniauth
+    = link_to image_tag("facebook.png", size: "70x70"), user_omniauth_authorize_path(:facebook), class: "facebook"
+  %br
+  or
+  %br
+  = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+    = f.email_field :email, autofocus: true, class: "input form-control"
+    %br
+    = f.password_field :password, autocomplete: "off", class: "input form-control"
+    %br
+    = f.check_box :remember_me
+    = f.label :remember_me
+    = f.submit I18n.t('user.sign_in'), class: "btn btn-default"
+  %br
+  Don't have an account?
+  = link_to I18n.t('user.sign_up'), new_user_registration_path

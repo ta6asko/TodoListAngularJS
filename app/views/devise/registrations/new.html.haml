@@ -1,0 +1,21 @@
+.sign_up
+  .omniauth
+    = link_to image_tag("facebook.png", size: "70x70"), user_omniauth_authorize_path(:facebook), class: "facebook"
+  %br
+  or
+  %br
+  = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
+    = devise_error_messages!
+    = f.email_field :email, autofocus: true, class: "input form-control"
+    - if @validatable
+      %i
+        %p
+          (#{@minimum_password_length} characters minimum)
+    = f.password_field :password, autocomplete: "off", class: "input form-control"
+    %br
+    = f.password_field :password_confirmation, autocomplete: "off", class: "input form-control"
+    %br
+    = f.submit I18n.t('user.sign_up'), class: "btn btn-default"
+  %br
+  Have an account? 
+  = link_to I18n.t('user.sign_in'), new_user_session_path

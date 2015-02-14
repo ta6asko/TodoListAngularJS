@@ -1,0 +1,76 @@
+.project
+  margin: 0 auto
+  width: 700px
+  margin-bottom: 50px
+  button
+    @extend .btn
+    @extend .btn-success
+    @extend .btn-sm 
+
+.project_content
+  @extend .panel
+  @extend .panel-primary
+  margin-bottom: 0px
+
+.project_header
+  @extend .panel-heading
+  height: 50px
+
+.create_task_panel
+  @extend .panel-footer
+  height: 50px
+
+.icon_note
+  @extend .glyphicon 
+  @extend .glyphicon-list-alt
+  @extend .col-md-1
+  float: left
+  font-size: 1.4em 
+
+.edit_project
+  @extend .col-md-9
+  form
+    input 
+      @extend .form-control
+      @extend .input-sm
+      display: inline
+      width: 400px
+
+.project_title
+  @extend .col-md-9
+
+.project_tools
+  @extend .col-md-2
+
+.icon_edit
+  @extend .glyphicon 
+  @extend .glyphicon-pencil
+  @extend .col-md-1
+  float: right
+  font-size: 1.2em 
+
+.icon_trash
+  @extend .glyphicon 
+  @extend .glyphicon-trash
+  @extend .col-md-1
+  float: right
+  font-size: 1.2em 
+
+.icon_plus
+  @extend .glyphicon 
+  @extend .glyphicon-plus
+  @extend .col-md-1
+  float: left
+  font-size: 1.4em
+
+.create_task_panel
+  form
+    input
+      @extend .form-control
+      @extend .input-sm
+      display: inline
+      width: 265px
+    button
+      @extend .btn
+      @extend .btn-success
+      @extend .btn-sm

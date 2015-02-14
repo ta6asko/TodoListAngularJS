@@ -1,0 +1,24 @@
+development:
+  adapter: postgresql
+  encoding: unicode
+  database: TodoListAngularjs_development
+  pool: 5
+  username: postgres
+  password: root
+
+test:
+  adapter: postgresql
+  encoding: unicode
+  database: TodoListAngularjs_test
+  pool: 5
+  username: postgres
+  password: root
+
+production:
+  adapter: postgresql
+  encoding: unicode
+  database: TodoListAngularjs_production
+  pool: 5
+  host: localhost
+  username: postgres
+  password: root

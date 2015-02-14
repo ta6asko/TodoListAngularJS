@@ -1,0 +1,14 @@
+.comments{"bs-collapse-target" => "", "ng-controller" => "CommentsController"}
+  .comment{"ng-repeat" => "comment in task.comments"}
+    .comment_content
+      {{comment.text}}
+    .comment_tools.col-md-2
+      .icon_trash_comment{"ng-click" => "deleteComment(comment, $index)", "ng-model" => "comment.destroy"}
+      .icon_paperclip{"ng-click" => "addFile = !addFile"}
+      .icon_comment{"ng-click" => "project.addComment = !project.addComment"}
+    %div{"ng-include" => "'angular/templates/supplements.html'"} 
+  .create_comment_form{"ng-show" => "task.comments.length < 1 || project.addComment"}
+    %form{"ng-submit" => "createComment(task.id)", :role => "form"}
+      %input{:autofocus => "", "ng-model" => "newComment.text", :type => "text", :required => "", :id => "create_comment_input"}
+      %button 
+        = I18n.t('comment.add_comment') 
