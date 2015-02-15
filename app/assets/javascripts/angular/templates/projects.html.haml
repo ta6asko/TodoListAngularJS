@@ -14,9 +14,9 @@
         .icon_edit{"ng-click" => "project.editProject = true"}
     .create_task_panel{"ng-controller" => "TasksController"}
       .icon_plus
-      %form{"ng-submit" => "createTask(project.id)", :role => "form"}
+      %form{"ng-submit" => "createTask(project.id)", :role => "form", :id => "create_task_form"}
         %input{:autofocus => "", "ng-model" => "newTask.title", :type => "text", :required => "", :id => "create_task_input"}
-        %input{:dp => "", :type => "text", "ng-model" => "newTask.deadline", :required => "", :id => "deadline"}
+        %input{:type => "date", "ng-model" => "newTask.deadline", :required => "", :id => "deadline"}
         %button 
           = I18n.t('task.add_task') 
   .tasks{"ng-include" => "'angular/templates/tasks.html'"}

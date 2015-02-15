@@ -2,7 +2,7 @@ require "rails_helper"
 
 feature "Task", :js => true do
   let (:task_title) { Faker::Lorem.characters(10) }
-  let (:deadline) { Faker::Lorem.characters(10) }
+  let (:deadline) { Faker::Date.between(2.days.ago, Date.today) }
   
   before do
     @user = create(:user)
@@ -14,7 +14,7 @@ feature "Task", :js => true do
   scenario "Create Task" do
     visit "/"
     fill_in 'create_task_input', with: task_title
-    fill_in 'deadline', with: "05,  February, 2015"
+    fill_in 'deadline', with: deadline
     click_button I18n.t('task.add_task')
     expect(page).to have_content task_title
   end
