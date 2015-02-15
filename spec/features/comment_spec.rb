@@ -23,6 +23,7 @@ feature "Comment", :js => true do
     @comment = create(:comment, task_id: @task.id)
     visit "/"
     click_link 'test'
+    page.find('.comment').hover
     page.find('.icon_comment').click 
     fill_in 'create_comment_input', with: comment
     click_button I18n.t('comment.add_comment')
@@ -33,6 +34,7 @@ feature "Comment", :js => true do
     @comment = create(:comment, text: "test_text", task_id: @task.id)
     visit "/"
     click_link 'test'
+    page.find('.comment').hover
     page.find('.icon_trash_comment').click 
     expect(page).to have_no_content "test_text"
   end

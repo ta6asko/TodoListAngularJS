@@ -7,6 +7,15 @@
     @extend .btn-success
     @extend .btn-sm 
 
+.ui-datepicker 
+  width: 216px
+  font: 9pt Arial, sans-serif
+  -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, .5)
+  -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, .5)
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, .5)
+  background-color: #FFF
+
+
 .project_content
   @extend .panel
   @extend .panel-primary
@@ -15,6 +24,9 @@
 .project_header
   @extend .panel-heading
   height: 50px
+  &:hover
+    .project_tools
+      display: block
 
 .create_task_panel
   @extend .panel-footer
@@ -41,6 +53,7 @@
 
 .project_tools
   @extend .col-md-2
+  display: none
 
 .icon_edit
   @extend .glyphicon 
@@ -48,6 +61,7 @@
   @extend .col-md-1
   float: right
   font-size: 1.2em 
+  cursor: pointer
 
 .icon_trash
   @extend .glyphicon 
@@ -55,6 +69,7 @@
   @extend .col-md-1
   float: right
   font-size: 1.2em 
+  cursor: pointer
 
 .icon_plus
   @extend .glyphicon 

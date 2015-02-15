@@ -3,6 +3,7 @@ require 'controllers/controllers_spec_helper'
 describe Api::TasksController do
 
   let(:task_attrs) { attributes_for(:task) }
+  let(:invalid_task_attrs) { attributes_for(:task, title: nil) }
 
   before do
     @user = create(:user)
@@ -22,6 +23,11 @@ describe Api::TasksController do
       it "responds successfully with an HTTP 200 status code" do
         post :create, project_id: @project.id, task: task_attrs
         expect(response.status).to eq(200)
+      end
+
+      it "should respond with status 400 on invalid request" do
+        post :create, project_id: @project.id, task: invalid_task_attrs
+        expect(response.status).to eq(400)
       end
     end
 
@@ -55,6 +61,11 @@ describe Api::TasksController do
       it "responds successfully with an HTTP 200 status code" do
         put :update, id: @task.id, project_id: @project.id, task: task_attrs 
         expect(response.status).to eq(200)
+      end
+
+      it "should respond with status 400 on invalid request" do
+        put :update, id: @task.id, project_id: @project.id, task: invalid_task_attrs
+        expect(response.status).to eq(400)
       end
     end
 

@@ -1,8 +1,8 @@
-.supplement{"ng-controller" => "SupplementsController", "ng-init" => "getCommentId(comment.id)"}
-  .comment.col-md-12.file{"ng-repeat" => "supplement in comment.supplements"}
+.supplements{"ng-controller" => "SupplementsController", "ng-init" => "getCommentId(comment.id)"}
+  .supplement{"ng-repeat" => "supplement in comment.supplements"}
     .col-md-10
       %a{"ng-href" => "{{supplement.file.file.url}}"}
         {{supplement.filename}}
     .icon_trash_file{"ng-click" => "deleteFile(supplement.id, $index)", "ng-model" => "supplement.destroy"}
-  .comment_content{"ng-show" => "addFile"}
+  .comment_content.file{"ng-show" => "addFile"}
     %input{"nv-file-select" => "", :type => "file", :uploader => "uploader", :id => "file"}

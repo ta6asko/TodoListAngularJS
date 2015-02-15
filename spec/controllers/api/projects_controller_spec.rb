@@ -54,11 +54,6 @@ describe Api::ProjectsController do
         post :create, project: attributes_for(:project, user_id: @user.id)
         expect(response.status).to eq(200)
       end
-
-      # it "should respond with status 400 on invalid request" do
-      #   post :create, project: attributes_for(:invalid_project)
-      #   expect(response.status).to eq(400)
-      # end
     end
 
     context 'being not signed in' do
@@ -93,10 +88,6 @@ describe Api::ProjectsController do
         expect(response.status).to eq(200)
       end
 
-      # it "should respond with status 400 on invalid request" do
-      #   put :update, id: @project.id, project: attributes_for(:invalid_project)
-      #   expect(response.status).to eq(400)
-      # end
     end
 
     context 'being not signed in' do

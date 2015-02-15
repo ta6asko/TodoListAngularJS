@@ -15,19 +15,22 @@ feature "Supplement", :js => true do
   scenario "Add file" do
     visit "/"
     click_link 'test_task'
+    page.find('.comment').hover
     page.find('.icon_paperclip').click 
-    page.find('#file').click
+    page.find('.file').click
     attach_file('file', file) 
-    expect(page).to have_css ".file"
-    sleep 5
+    expect(page).to have_content "test.pdf"
   end
 
   scenario "Delete file" do
     visit "/"
     click_link 'test_task'
+    page.find('.comment').hover
     page.find('.icon_paperclip').click 
-    page.find('#file').click
-    attach_file('file', file) 
+    page.find('.file').click
+    attach_file('file', file)
+    expect(page).to have_content "test.pdf"
+    page.find('.supplement').hover
     page.find('.icon_trash_file').click
     expect(page).to have_no_content "test.pdf"
   end

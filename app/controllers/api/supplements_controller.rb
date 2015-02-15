@@ -7,6 +7,8 @@ module Api
     def create
       if @supplement.save
         render :json => @supplement, status: 200
+      else
+        render :json => @supplement.errors, status: 400
       end
     end
 

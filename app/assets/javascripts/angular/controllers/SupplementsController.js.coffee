@@ -10,8 +10,6 @@ app.controller "SupplementsController", [ "$scope", "Supplement", "FileUploader"
     )
     uploader.onSuccessItem = (fileItem, response, status, headers) ->
       $scope.comment.supplements.push response
-      console.log("sss", response)
-      # $scope.addFile = false
 
   $scope.deleteFile = (id, index) ->
     Supplement.delete

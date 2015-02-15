@@ -4,7 +4,6 @@ module Api
     
 
     def index
-      # @projects = current_user.projects
       render :json => @projects, status: 200
     end
 
@@ -12,7 +11,7 @@ module Api
       if @project.save
          render :json => @project, status: 200
       else
-         render :json => {:errors => @project.errors.full_messages}, status: 422
+         render :json => {:errors => @project.errors.full_messages}
       end
     end
 

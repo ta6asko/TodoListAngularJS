@@ -11,7 +11,8 @@
           .update_task_form{"ng-show" => "task.editTask"}
             %form{"ng-submit" => "updateTask(project.id, task.id, task)", :role => "form"}
               %input{:autofocus => "", "ng-model" => "task.title", :type => "text", :required => "", :id => "update_task_input"}
-              %button{:type => "submit"} Update
+              %button{:type => "submit"} 
+                = I18n.t('task.update_task')
         .task_tools
           .icon_trash_task{"ng-click" => "deleteTask(task.id, $index)", "ng-model" => "task.destroy"}
           .icon_edit_task{"ng-click" => "task.editTask = true"}   

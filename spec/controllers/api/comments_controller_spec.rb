@@ -3,6 +3,7 @@ require 'controllers/controllers_spec_helper'
 describe Api::CommentsController do
   
   let(:comment_attrs) { attributes_for(:comment) }
+  let(:invalid_comment_attrs) { attributes_for(:comment, text: nil) }
 
   before do
     @user = create(:user)
@@ -23,6 +24,11 @@ describe Api::CommentsController do
       it "responds successfully with an HTTP 200 status code" do
         post :create, task_id: @task.id, comment: comment_attrs
         expect(response.status).to eq(200)
+      end
+
+      it "should respond with status 400 on invalid request" do
+        post :create, task_id: @task.id, comment: invalid_comment_attrs
+        expect(response.status).to eq(400)
       end
     end
 

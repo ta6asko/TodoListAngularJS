@@ -3,7 +3,7 @@ require 'controllers/controllers_spec_helper'
 describe Api::SupplementsController do
   
   let(:supplement_attrs) { attributes_for(:supplement) }
-
+  
   before do
     @user = create(:user)
     allow(controller).to receive(:current_user) { @user }
@@ -15,6 +15,7 @@ describe Api::SupplementsController do
   end
 
   describe "POST #create" do
+
     context 'being signed in' do
 
       before do
@@ -25,6 +26,7 @@ describe Api::SupplementsController do
         post :create, comment_id: @comment.id, supplement: supplement_attrs
         expect(response.status).to eq(200)
       end
+
     end
 
     context 'being not signed in' do

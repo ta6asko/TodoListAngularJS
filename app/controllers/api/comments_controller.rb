@@ -6,6 +6,8 @@ module Api
     def create
       if @comment.save
         render :json => @comment, status: 200
+      else
+        render :json => @comment.errors, status: 400
       end
     end
 

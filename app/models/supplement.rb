@@ -4,7 +4,6 @@ class Supplement < ActiveRecord::Base
 
   belongs_to :comment
   validates :comment_id, presence: true
-  
   mount_uploader :file, FileUploader
 
   private

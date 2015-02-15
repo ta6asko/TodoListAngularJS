@@ -21,8 +21,10 @@
 //= require angular-ui-bootstrap
 //= require angularjs-file-upload
 //= require main
+
 //= require_tree ./angular/templates/
 //= require_tree ./angular/controllers/
 //= require_tree ./angular/directives/
 //= require_tree ./angular/services/
+//= require_tree ./angular/vendor/
 //= require_tree .

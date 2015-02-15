@@ -34,3 +34,6 @@ en:
     update_task: "Update"
   comment:
     add_comment: "Add Comment"
+  layout:
+    title_1: "simple todo lists"
+    title_2: "FROM RUBY GARAGE"

@@ -1,6 +1,8 @@
 .title_top
-  %h2 simple todo lists
-  %h3 from ruby garage
+  %h2 
+    = I18n.t('layout.title_1')
+  %h3 
+    = I18n.t('layout.title_2')
 .messages{"ng-repeat" => "error in projectsErrors.errors"} 
   %h3 {{error}}
 .projects{"ng-include" => "'angular/templates/projects.html'"}

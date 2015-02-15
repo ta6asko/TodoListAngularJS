@@ -1,0 +1,51 @@
+.task
+  @extend .panel-body
+  padding: 0px
+  input
+    @extend .col-md-1
+    margin-top: 6px
+    margin-bottom: 6px
+  a
+    text-decoration: none
+    line-height: 18px
+    @extend .col-md-9
+  button
+    margin-top: 6px
+.task_panel
+  @extend .panel 
+  @extend .panel-default
+  &:hover
+    background-color: #fcfed5
+    .task_tools
+      display: block
+
+.panel-group .task_panel + .task_panel
+  margin-top: 0px
+
+.update_task_form
+  @extend .col-md-9
+  form
+    input 
+      @extend .form-control
+      @extend .input-sm
+      display: inline
+      width: 400px
+
+.task_tools
+  @extend .col-md-2
+  margin-top: 9px
+  display: none
+
+.icon_trash_task
+  @extend .glyphicon
+  @extend .glyphicon-trash
+  @extend .col-md-1
+  float: right
+  cursor: pointer
+
+.icon_edit_task
+  @extend .glyphicon
+  @extend .glyphicon-pencil
+  @extend .col-md-1
+  float: right
+  cursor: pointer

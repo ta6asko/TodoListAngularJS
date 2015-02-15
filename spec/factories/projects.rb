@@ -1,7 +1,6 @@
 FactoryGirl.define do
   factory :project do
     title Faker::Lorem.characters(50)
-    # user
   end
 
   factory :invalid_project, parent: :project do |f| 
